@@ -14,8 +14,7 @@ public class Calendar0 {
 	// Tests the isLeapYear function.
 	private static void isLeapYearTest(int year) {
 		String commonOrLeap = "common";
-		boolean isLeapYear;
-		if (isLeapYear = ((year % 400) == 0) || ((year % 4) == 0) && ((year % 100) != 0)); {}
+		if (isLeapYear(int year) == true) ;
 			commonOrLeap = "leap";
 		}
 		System.out.println(year + " is a " + commonOrLeap + " year");  	
@@ -23,13 +22,16 @@ public class Calendar0 {
 
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
-		// Replace this comment with your code
+		System.out.println("Month " +nDaysInMonth(, year)
 	}
 
 	// Returns true if the given year is a leap year, false otherwise.
 	public static boolean isLeapYear(int year) {
-	    // Replace the following statement with your code
-		return false;
+	  boolean isLeapYear;
+		if (isLeapYear = ((year % 400) == 0) || ((year % 4) == 0) && ((year % 100) != 0)); {
+			isLeapYear = true;
+		}
+		return true;
 	}
 	 
 	// Returns the number of days in the given month and year.
@@ -37,7 +39,68 @@ public class Calendar0 {
 	// February has 28 days in a common year, and 29 days in a leap year.
 	// All the other months have 31 days.
 	public static int nDaysInMonth(int month, int year) {
-		// Replace the following statement with your code
-		return 0;
+		if (isLeapYear(int year) == true) {
+			String monthString;
+			switch (month) {
+			case 1: monthString = "31";
+			break;
+			case 2: monthString = "29";
+			break;
+			case 3: monthString = "31";
+			break;
+			case 4: monthString = "30";
+			break;
+			case 5: monthString = "31";
+			break;
+			case 6: monthString = "30";
+			break;
+			case 7: monthString = "31";
+			break;
+			case 8: monthString = "31";
+			break;
+			case 9: monthString = "30";
+			break;
+			case 10: monthString = "31";
+			break;
+			case 11: monthString = "30";
+			break;
+			case 12: monthString = "31";
+			break;
+			default: monthString = "Invalid month";
+			break;
+		}
+			
+		}else {
+			String monthString;
+			switch (month) {
+			case 1: monthString = "31";
+			break;
+			case 2: monthString = "28";
+			break;
+			case 3: monthString = "31";
+			break;
+			case 4: monthString = "30";
+			break;
+			case 5: monthString = "31";
+			break;
+			case 6: monthString = "30";
+			break;
+			case 7: monthString = "31";
+			break;
+			case 8: monthString = "31";
+			break;
+			case 9: monthString = "30";
+			break;
+			case 10: monthString = "31";
+			break;
+			case 11: monthString = "30";
+			break;
+			case 12: monthString = "31";
+			break;
+			default: monthString = "Invalid month";
+			break;
+		}
+		}
+		return monthString;
 	}
 }
