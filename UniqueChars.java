@@ -1,8 +1,8 @@
 /** String processing exercise 2. */
 public class UniqueChars {
     public static void main(String[] args) {  
-        String str = args[0];
-        System.out.println(uniqueChars(str));
+        String str = args[0]; 
+        System.out.println(uniqueChars(str)); 
     }
 
     /**
@@ -11,7 +11,13 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
+        String uniqueChars = "";
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (uniqueChars.indexOf(ch) == -1 || ch==' ') { 
+                uniqueChars += (char) (ch);
+            } 
+            }
+        return uniqueChars;
     }
 }

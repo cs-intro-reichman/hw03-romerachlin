@@ -14,10 +14,11 @@ public class Calendar0 {
 	// Tests the isLeapYear function.
 	private static void isLeapYearTest(int year) {
 		String commonOrLeap = "common";
-		if (isLeapYear(year)) {
+		boolean isLeapYear;
+		if (isLeapYear = ((year % 400) == 0) || ((year % 4) == 0) && ((year % 100) != 0)); {}
 			commonOrLeap = "leap";
 		}
-		System.out.println(year + " is a " + commonOrLeap + " year");  
+		System.out.println(year + " is a " + commonOrLeap + " year");  	
 	}
 
 	// Tests the nDaysInMonth function.
