@@ -14,7 +14,7 @@ public class Calendar0 {
 	// Tests the isLeapYear function.
 	private static void isLeapYearTest(int year) {
 		String commonOrLeap = "common";
-		if (isLeapYear(int year) == true) ;
+		if (isLeapYear(year)) {
 			commonOrLeap = "leap";
 		}
 		System.out.println(year + " is a " + commonOrLeap + " year");  	
@@ -22,16 +22,16 @@ public class Calendar0 {
 
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
-		System.out.println("Month " +nDaysInMonth(, year)
+		for (int i=1;i<13;i++) {
+					System.out.println ("Month "+ i +" has "+ nDaysInMonth(i, year) + " days");
+		}
 	}
 
 	// Returns true if the given year is a leap year, false otherwise.
 	public static boolean isLeapYear(int year) {
-	  boolean isLeapYear;
-		if (isLeapYear = ((year % 400) == 0) || ((year % 4) == 0) && ((year % 100) != 0)); {
-			isLeapYear = true;
-		}
-		return true;
+	  boolean isLeapYear=false;
+		isLeapYear = ((year % 400) == 0) || ((year % 4) == 0) && ((year % 100) != 0);
+		return isLeapYear;
 	}
 	 
 	// Returns the number of days in the given month and year.
@@ -39,68 +39,24 @@ public class Calendar0 {
 	// February has 28 days in a common year, and 29 days in a leap year.
 	// All the other months have 31 days.
 	public static int nDaysInMonth(int month, int year) {
-		if (isLeapYear(int year) == true) {
-			String monthString;
-			switch (month) {
-			case 1: monthString = "31";
+		int days = 31;
+		switch (month)
+		{
+			case 4: days= 30 ;
 			break;
-			case 2: monthString = "29";
+			case 6: days= 30 ;
 			break;
-			case 3: monthString = "31";
+			case 9: days= 30 ;
 			break;
-			case 4: monthString = "30";
+			case 11: days= 30 ;
 			break;
-			case 5: monthString = "31";
-			break;
-			case 6: monthString = "30";
-			break;
-			case 7: monthString = "31";
-			break;
-			case 8: monthString = "31";
-			break;
-			case 9: monthString = "30";
-			break;
-			case 10: monthString = "31";
-			break;
-			case 11: monthString = "30";
-			break;
-			case 12: monthString = "31";
-			break;
-			default: monthString = "Invalid month";
-			break;
-		}
-			
-		}else {
-			String monthString;
-			switch (month) {
-			case 1: monthString = "31";
-			break;
-			case 2: monthString = "28";
-			break;
-			case 3: monthString = "31";
-			break;
-			case 4: monthString = "30";
-			break;
-			case 5: monthString = "31";
-			break;
-			case 6: monthString = "30";
-			break;
-			case 7: monthString = "31";
-			break;
-			case 8: monthString = "31";
-			break;
-			case 9: monthString = "30";
-			break;
-			case 10: monthString = "31";
-			break;
-			case 11: monthString = "30";
-			break;
-			case 12: monthString = "31";
-			break;
-			default: monthString = "Invalid month";
-			break;
-		}
-		}
-		return monthString;
+			case 2: 
+				if (isLeapYear(year))
+					days=29;
+				else
+					days=28;
+				break;
+			}
+		return days;
 	}
 }
