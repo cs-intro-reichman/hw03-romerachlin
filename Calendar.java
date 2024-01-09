@@ -15,6 +15,10 @@ public class Calendar {
 	 	while (year<yearIn) {
 	 		advance();
 	 		debugDaysCounter++;
+            if (debugDaysCounter==36500) { 
+	 			break;
+           }
+         }
             while (year==yearIn) {  
             	if (dayOfWeek==1) {
 				System.out.println(dayOfMonth+"."+month+"."+year+" Sunday");
@@ -25,12 +29,9 @@ public class Calendar {
 			 
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)
-	 		if (debugDaysCounter==36500) { 
-	 			break;
-	 		}
-        }
-	 }
-	
+	 		
+     }
+	 	
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
