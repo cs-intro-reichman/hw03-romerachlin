@@ -9,22 +9,23 @@ public class Calendar {
 	
 	public static void main(String args[]) {
 		int yearIn = Integer.parseInt(args[0]);
-	    int debugDaysCounter = 0; 
+	    //int debugDaysCounter = 0; 
 	    //// Write the necessary initialization code, and replace the condition
 	    //// of the while loop with the necessary condition 
 	 	while (year<yearIn) {
-	 		advance();
-	 		debugDaysCounter++;
-            if (debugDaysCounter==36500) { 
-	 			break;
-           }
+	 		advance();  
+    		//debugDaysCounter++;
+            //if (debugDaysCounter==36500) { 
+	 		//	break;
+           //}
          }
             while (year==yearIn) {  
             	if (dayOfWeek==1) {
-				System.out.println(dayOfMonth+"."+month+"."+year+" Sunday");
+				System.out.println(dayOfMonth+"/"+month+"/"+year+" Sunday");
 			}else{
-				System.out.println(dayOfMonth+"."+month+"."+year);
+				System.out.println(dayOfMonth+"/"+month+"/"+year);
 			}
+            advance();  
 		}
 			 
 	 		//// If you want to stop the loop after n days, replace the condition of the
